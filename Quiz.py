@@ -12,10 +12,19 @@ score = 0
 def clear():
 	os.system("cls" if os.name=="nt" else "clear")
 
+
+
+
+#	The main game code starts here:
+
 while quit == False:
 	
 	randomNumber = random.randint(0, 25)
 
+	print("########################################")
+	print("Score: ", score)
+	print("########################################")
+	print("")
 	print(questions[randomNumber])
 
 	answer = input()
@@ -26,11 +35,7 @@ while quit == False:
 		print("----------------------------------------")
 		print("CORRECT!")
 		print("----------------------------------------")
-		print("")
-		print("########################################")
-		print("Your score is: ", score)
-		print("########################################")
-		sleep(2)
+		sleep(1)
 		clear()
 
 	elif answer in stopCommands:
@@ -52,5 +57,7 @@ while quit == False:
 clear()
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 print("Goodbye! Thanks for playing")
+print("")
+print("Your final score is: ", score)
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 sleep(3)
