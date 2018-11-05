@@ -22,17 +22,25 @@ while quit == False:
 
 	if answer == answers[randomNumber]:
 		score += 1
+		clear()
+		print("----------------------------------------")
+		print("CORRECT!")
+		print("----------------------------------------")
+		print("")
 		print("########################################")
-		print("CORRECT! Your score is:", score)
+		print("Your score is: ", score)
 		print("########################################")
-		sleep(3)
+		sleep(2)
 		clear()
 
 	elif answer in stopCommands:
 		quit = True
 
 	else:
+		clear()
+		print("----------------------------------------")
 		print("WRONG! The correct answer is: ", answers[randomNumber])
+		print("----------------------------------------")
 		print("")
 		score = 0
 		print("########################################")
@@ -41,4 +49,8 @@ while quit == False:
 		sleep(6)
 		clear()
 
-print("Goodbye!")
+clear()
+print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+print("Goodbye! Thanks for playing")
+print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+sleep(3)
