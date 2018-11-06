@@ -61,3 +61,27 @@ print("")
 print("Your final score is: ", score)
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 sleep(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+   __                      ___ _______ 
+  / /  ___ ____  ___ ____ ( _ )_  / _ \
+ / _ \/ _ `/ _ \/ _ `(_-</ _  |/ /\_, /
+/_//_/\_,_/_//_/\_,_/___/\___//_//___/ 
+                                       
+
+"""
