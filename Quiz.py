@@ -60,6 +60,10 @@ print("Goodbye! Thanks for playing")
 print("")
 print("Your final score is: ", score)
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+file = open("score.txt", "w")
+
+file.write( "Score: " + str(score));
+file.close()
 sleep(3)
 
 
