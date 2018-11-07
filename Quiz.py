@@ -22,7 +22,7 @@ while quit == False:
 	randomNumber = random.randint(0, 25)
 
 	print("########################################")
-	print("Score: ", score)
+	print("##             Score: ", score,"             ##")
 	print("########################################")
 	print("")
 	print(questions[randomNumber])
@@ -33,7 +33,7 @@ while quit == False:
 		score += 1
 		clear()
 		print("----------------------------------------")
-		print("CORRECT!")
+		print("                 CORRECT!                 ")
 		print("----------------------------------------")
 		sleep(1)
 		clear()
@@ -47,24 +47,25 @@ while quit == False:
 		print("WRONG! The correct answer is: ", answers[randomNumber])
 		print("----------------------------------------")
 		print("")
-		score = 0
 		print("########################################")
-		print("Your score has been reset. It is now: ", score)
+		print("Your score was: ", score)
+		score = 0
+		print("and have now been reset. It is now: ", score)
 		print("########################################")
 		sleep(6)
 		clear()
 
 clear()
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-print("Goodbye! Thanks for playing")
+print("      Goodbye! Thanks for playing       ")
 print("")
-print("Your final score is: ", score)
+print("      Your final score is: ", score)
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-file = open("score.txt", "w")
 
+file = open("SCORE.txt", "w")
 file.write( "Score: " + str(score));
 file.close()
-sleep(3)
+sleep(5)
 
 
 
