@@ -6,7 +6,9 @@ questions = ["What is A?", "What is B?", "What is C?", "What is D?", "What is E?
 answers = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"]
 stopCommands = ["exit", "Exit", "quit", "Quit", "stop", "Stop"]
 quit = False
+saveReply = ["Yes", "yes", "No", "no", "Y", "y", "N", "n"]
 
+print(answers[5])
 score = 0
 
 def clear():
@@ -27,9 +29,9 @@ while quit == False:
 	print("")
 	print(questions[randomNumber])
 
-	answer = input()
+	answer = input().lower().replace(" ", "")
 
-	if answer == answers[randomNumber]:
+	if answer == answers[randomNumber].lower():
 		score += 1
 		clear()
 		print("----------------------------------------")
@@ -61,11 +63,15 @@ print("      Goodbye! Thanks for playing       ")
 print("")
 print("      Your final score is: ", score)
 print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+save = input("Would you like to save the score to a .txt file? y/n: ")
 
-file = open("SCORE.txt", "w")
-file.write( "Score: " + str(score));
-file.close()
-sleep(5)
+if save in saveReply:
+
+	clear()
+	name = input("Please enter your name: ")
+	file = open("SCORE.txt", "w")
+	file.write(name + " | Score: " + str(score));
+	file.close()
 
 
 
