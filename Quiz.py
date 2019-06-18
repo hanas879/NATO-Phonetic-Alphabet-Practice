@@ -19,7 +19,7 @@ def clear():
 #	The main game code starts here:
 
 while quit == False:
-	os.system("cls" if os.name=="nt" else "clear")
+	clear()
 	randomNumber = random.randint(0, 25)
 
 	print("########################################")
