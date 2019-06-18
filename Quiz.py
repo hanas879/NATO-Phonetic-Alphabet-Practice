@@ -8,7 +8,6 @@ stopCommands = ["exit", "Exit", "quit", "Quit", "stop", "Stop"]
 quit = False
 saveReply = ["Yes", "yes", "No", "no", "Y", "y", "N", "n"]
 
-print(answers[5])
 score = 0
 
 def clear():
@@ -20,11 +19,13 @@ def clear():
 #	The main game code starts here:
 
 while quit == False:
-	
+	os.system("cls" if os.name=="nt" else "clear")
 	randomNumber = random.randint(0, 25)
 
 	print("########################################")
 	print("##             Score: ", score,"             ##")
+	print("##                                    ##")
+	print("##      Type 'exit' to end the game   ##")
 	print("########################################")
 	print("")
 	print(questions[randomNumber])
@@ -69,8 +70,8 @@ if save in saveReply:
 
 	clear()
 	name = input("Please enter your name: ")
-	file = open("SCORE.txt", "w")
-	file.write(name + " | Score: " + str(score));
+	file = open("SCORE.txt", "a")
+	file.write('\n' + name + " | Score: " + str(score));
 	file.close()
 
 
@@ -89,10 +90,10 @@ if save in saveReply:
 
 
 """
-   __                      ___ _______ 
+   __                      ___ _______
   / /  ___ ____  ___ ____ ( _ )_  / _ \
  / _ \/ _ `/ _ \/ _ `(_-</ _  |/ /\_, /
-/_//_/\_,_/_//_/\_,_/___/\___//_//___/ 
-                                       
+/_//_/\_,_/_//_/\_,_/___/\___//_//___/
+
 
 """
